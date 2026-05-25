@@ -1,9 +1,5 @@
 function App() {
-  return (
-    <div>
-      Kanban Board
-    </div>
-  )
+  return <div>Kanban Board</div>
 }
 
 export default App
