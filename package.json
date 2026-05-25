@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write src",
+    "format:check": "prettier --check src",
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
