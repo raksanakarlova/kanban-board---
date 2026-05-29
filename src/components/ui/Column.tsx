@@ -15,7 +15,14 @@ export interface ColumnProps {
   onDelete: (cardId: string, columnId: string) => void
 }
 
-function ColumnUi({ column, onAdd, onMove, onEdit, onDelete }: ColumnProps) {
+function ColumnUi({
+  column,
+  columns,
+  onAdd,
+  onMove,
+  onEdit,
+  onDelete,
+}: ColumnProps) {
   function handleDragOver(e: React.DragEvent<HTMLDivElement>) {
     e.preventDefault()
   }
@@ -43,6 +50,8 @@ function ColumnUi({ column, onAdd, onMove, onEdit, onDelete }: ColumnProps) {
             key={card.id}
             card={card}
             columnId={column.id}
+            columns={columns}
+            onMove={onMove}
             onEdit={onEdit}
             onDelete={onDelete}
           />
