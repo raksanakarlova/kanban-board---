@@ -11,11 +11,6 @@ export const INITIAL_COLUMNS: Column[] = [
         description: 'купить миндальное молоко',
         priority: 'low',
       },
-      {
-        id: crypto.randomUUID(),
-        title: 'Go to the cinema',
-        priority: 'medium',
-      },
     ],
   },
 
@@ -28,11 +23,6 @@ export const INITIAL_COLUMNS: Column[] = [
         title: 'Go to the cinema',
         priority: 'medium',
       },
-      {
-        id: crypto.randomUUID(),
-        title: 'Buy clothes',
-        priority: 'low',
-      },
     ],
   },
 
@@ -43,12 +33,7 @@ export const INITIAL_COLUMNS: Column[] = [
       {
         id: crypto.randomUUID(),
         title: 'Take the pills',
-        priority: 'low',
-      },
-      {
-        id: crypto.randomUUID(),
-        title: 'Go to the cinema',
-        priority: 'medium',
+        priority: 'high',
       },
     ],
   },
