@@ -34,7 +34,7 @@ function ColumnUi({ column, onAdd, onMove, onEdit, onDelete }: ColumnProps) {
       onDrop={handleDrop}
       className="flex flex-col min-h-96 bg-gray-50 mx-auto w-100 rounded-md"
     >
-      <h2 className="pt-2 pb-2 bg-gray-200  rounded-md text-center text-xl">
+      <h2 className="pt-2 pb-2 bg-gray-200 rounded-md text-center text-xl text-gray-700">
         {column.title}
       </h2>
       <div className="flex flex-col flex-1">
