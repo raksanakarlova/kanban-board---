@@ -20,8 +20,17 @@ function CardUi({ card, columnId, onEdit, onDelete }: CardProps) {
   const [editText, setEditText] = useState(card.title)
   const [editDescription, setEditDescription] = useState(card.description)
 
+  function handleDragStart(e: React.DragEvent<HTMLDivElement>) {
+    e.dataTransfer.setData('cardId', card.id)
+    e.dataTransfer.setData('fromColumnId', columnId)
+  }
+
   return (
-    <div className="flex flex-col border border-gray-200 bg-white mx-auto my-4 w-90 h-35 p-4 rounded-md shadow-lg">
+    <div
+      draggable
+      onDragStart={handleDragStart}
+      className="flex flex-col border border-gray-200 bg-white mx-auto my-4 w-90 h-35 p-4 rounded-md shadow-lg cursor-grab active:cursor-grabbing"
+    >
       <Modal isOpen={isEditing} onClose={() => setEditing(false)}>
         <div className="flex flex-col gap-3">
           <input
