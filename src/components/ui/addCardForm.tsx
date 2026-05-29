@@ -26,7 +26,7 @@ function AddCardFormUi({ columnId, onAdd }: AddCardFormProps) {
   return (
     <div className="mt-auto">
       <button
-        className="w-90 py-1.5 ml-5 mb-2 rounded bg-blue-500 text-sm font-medium text-white hover:bg-blue-600"
+        className="w-90 py-1.5 ml-5 mt-4 mb-4 rounded bg-blue-500 text-sm font-medium text-white hover:bg-blue-600"
         onClick={() => {
           setOpen(true)
         }}
@@ -41,20 +41,20 @@ function AddCardFormUi({ columnId, onAdd }: AddCardFormProps) {
             placeholder="Card title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="w-full border-b border-gray-300 pb-1 text-lg font-medium outline-none focus:border-gray-600"
+            className="w-full dark:text-white border-b border-gray-300 pb-1 text-lg font-medium outline-none focus:border-gray-600"
           />
           <textarea
             placeholder="Add a description..."
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             rows={3}
-            className="w-full resize-none rounded border 
+            className="w-full dark:text-white resize-none rounded border 
             border-gray-200 p-2 text-sm outline-none focus:border-gray-400"
           />
           <select
             value={priority}
             onChange={(e) => setPriority(e.target.value as Priority)}
-            className="w-full rounded border border-gray-200 p-2 text-sm outline-none"
+            className="w-full dark:text-white rounded border border-gray-200 p-2 text-sm outline-none"
           >
             <option value="low">Low</option>
             <option value="medium">Medium</option>
