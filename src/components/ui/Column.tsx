@@ -39,9 +39,9 @@ function ColumnUi({
     <div
       onDragOver={handleDragOver}
       onDrop={handleDrop}
-      className="flex flex-col min-h-96 bg-gray-50 mx-auto my-4 w-full md:w-100 rounded-md"
+      className="flex flex-col min-h-96 bg-gray-50 dark:bg-gray-700 mx-auto my-4 w-full md:w-100 rounded-md"
     >
-      <h2 className="pt-2 pb-2 bg-gray-200 rounded-md text-center text-xl text-gray-700">
+      <h2 className="pt-2 pb-2 bg-gray-200 dark:bg-gray-500 dark:text-white rounded-md text-center text-xl text-gray-700">
         {column.title}
       </h2>
       <div className="flex flex-col flex-1">

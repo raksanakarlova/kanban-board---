@@ -40,7 +40,7 @@ function CardUi({
     <div
       draggable
       onDragStart={handleDragStart}
-      className="flex flex-col border border-gray-200 bg-white mx-auto my-4 w-90 h-35 p-4 rounded-md shadow-lg cursor-grab active:cursor-grabbing"
+      className="flex flex-col border dark:bg-gray-400 border-gray-200 bg-white mx-auto my-4 w-90 h-35 p-4 rounded-md shadow-lg cursor-grab active:cursor-grabbing"
     >
       <Modal isOpen={isEditing} onClose={() => setEditing(false)}>
         <div className="flex flex-col gap-3">
@@ -84,7 +84,9 @@ function CardUi({
       </Modal>
 
       <div className="flex justify-between items-start gap-2 mb-1">
-        <h3 className="min-w-0 wrap-break-word text-gray-700">{card.title}</h3>
+        <h3 className="min-w-0 wrap-break-word text-gray-700 dark:text-white">
+          {card.title}
+        </h3>
         <span
           className={`
             border rounded-full shrink-0 text-xs pr-2 pl-2 pt-0.5 pb-0.5
@@ -95,12 +97,12 @@ function CardUi({
         </span>
       </div>
       {card.description && (
-        <p className="wrap-break-word text-sm text-gray-700">
+        <p className="wrap-break-word text-sm text-gray-700 dark:text-white">
           {card.description}
         </p>
       )}
       <select
-        className="md:hidden placeholder: p-1 text-xs mt-2 text-gray-500 border border-gray-200 rounded outline-none"
+        className="md:hidden placeholder: p-1 text-xs mt-2 text-gray-500 dark:text-white border border-gray-200 rounded outline-none"
         defaultValue=""
         onChange={(e) => {
           if (e.target.value) onMove(card.id, columnId, e.target.value)
@@ -118,11 +120,14 @@ function CardUi({
           ))}
       </select>
       <div className="flex mt-auto gap-2">
-        <button className="text-gray-700" onClick={() => setEditing(true)}>
+        <button
+          className="text-gray-700 dark:text-white"
+          onClick={() => setEditing(true)}
+        >
           <SquarePen size={16} />
         </button>
         <button
-          className="text-gray-700"
+          className="text-gray-700 dark:text-white"
           onClick={() => onDelete(card.id, columnId)}
         >
           <Trash size={16} />
