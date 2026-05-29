@@ -2,6 +2,8 @@
 
 A task management board for tracking work across multiple status columns — inspired by Trello.
 
+**Live demo:** https://kanban-board-lovat-delta.vercel.app/
+
 ## Features
 
 - **Create cards** — add cards to any column with a title, description, and priority
@@ -15,7 +17,9 @@ A task management board for tracking work across multiple status columns — ins
 
 ## Screenshots
 
-
+![Light theme](/.github/assets/light.png)
+![Dark theme](/.github/assets/dark.png)
+![Mobile](/.github/assets/mobile.png)
 
 ## Tech Stack
 
